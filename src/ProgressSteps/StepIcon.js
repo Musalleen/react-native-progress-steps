@@ -31,8 +31,7 @@ class StepIcon extends Component {
           fontSize: this.props.activeLabelFontSize || this.props.labelFontSize,
         },
         leftBar: {
-          position: 'absolute',
-          zIndex:-1,
+          position: 'relative',
           top: 40 / 2.22,
           left: 0,
           right: 40,
@@ -42,8 +41,7 @@ class StepIcon extends Component {
           marginRight: 40 / 2 + 2,
         },
         rightBar: {
-          position: 'absolute',
-          zIndex:-1,
+          position: 'relative',
           top: 40 / 2.22,
           right: 0,
           left: 40,
