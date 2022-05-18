@@ -32,9 +32,10 @@ class StepIcon extends Component {
         },
         leftBar: {
           position: 'absolute',
+          zIndex:-1,
           top: 40 / 2.22,
           left: 0,
-          right: 40 + 4,
+          right: 40,
           borderTopStyle: this.props.borderStyle,
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.completedProgressBarColor,
@@ -42,9 +43,10 @@ class StepIcon extends Component {
         },
         rightBar: {
           position: 'absolute',
+          zIndex:-1,
           top: 40 / 2.22,
           right: 0,
-          left: 40 + 4,
+          left: 40,
           borderTopStyle: this.props.borderStyle,
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.progressBarColor,
