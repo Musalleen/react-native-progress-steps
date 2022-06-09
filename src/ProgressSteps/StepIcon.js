@@ -19,7 +19,7 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 20 / 3,
+          top: Platform.OS==="android"? 20 / 3:18 / 2,
           position:Platform.OS==="android"?"":'relative'
         },
         labelText: {
@@ -40,6 +40,7 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.completedProgressBarColor,
           marginRight: 40 / 2 + 2,
+          zIndex:-10
         },
         rightBar: {
           position: 'absolute',
@@ -50,6 +51,7 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.progressBarColor,
           marginLeft: 40 / 2 + 2,
+          zIndex:-10
         },
         stepNum: {
           color: this.props.activeStepNumColor,
@@ -86,6 +88,7 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.completedProgressBarColor,
           marginRight: 36 / 2 + 4,
+          zIndex:-10
         },
         rightBar: {
           position: 'absolute',
@@ -96,6 +99,7 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.completedProgressBarColor,
           marginLeft: 36 / 2 + 4,
+          zIndex:-10
         },
         stepNum: {
           color: this.props.completedStepNumColor,
