@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity,Platform } from 'react-native';
 import PropTypes from 'prop-types';
 
 class StepIcon extends Component {
@@ -20,6 +20,7 @@ class StepIcon extends Component {
         circleText: {
           alignSelf: 'center',
           top: 20 / 3,
+          position:Platform.OS==="android"?"":'relative'
         },
         labelText: {
           textAlign: 'center',
@@ -31,7 +32,7 @@ class StepIcon extends Component {
           fontSize: this.props.activeLabelFontSize || this.props.labelFontSize,
         },
         leftBar: {
-          position: 'relative',
+          position: 'absolute',
           top: 40 / 2.22,
           left: 0,
           right: 40,
@@ -41,7 +42,7 @@ class StepIcon extends Component {
           marginRight: 40 / 2 + 2,
         },
         rightBar: {
-          position: 'relative',
+          position: 'absolute',
           top: 40 / 2.22,
           right: 0,
           left: 40,
