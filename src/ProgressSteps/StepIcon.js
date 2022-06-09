@@ -68,7 +68,8 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 18 / 2,
+          top: Platform.OS==="android"? 20 / 3:18 / 2,
+          position:Platform.OS==="android"?"":"relative",
         },
         labelText: {
           textAlign: 'center',
@@ -117,7 +118,8 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 18 / 2,
+          top: Platform.OS==="android"? 20 / 3:18 / 2,
+          position:Platform.OS==="android"?"":"relative",
         },
         labelText: {
           textAlign: 'center',
