@@ -20,14 +20,14 @@ class StepIcon extends Component {
         circleText: {
           alignSelf: 'center',
           top: Platform.OS==="android"? 20 / 3:18 / 2,
-          position:Platform.OS==="android"?"":'relative'
+          position:"relative"
         },
         labelText: {
           textAlign: 'center',
           flexWrap: 'wrap',
           width: 100,
           paddingTop: 4,
-          position:Platform.OS==="android"?"":"relative",
+          position:"relative",
           fontFamily: this.props.labelFontFamily,
           color: this.props.activeLabelColor,
           fontSize: this.props.activeLabelFontSize || this.props.labelFontSize,
@@ -69,14 +69,14 @@ class StepIcon extends Component {
         circleText: {
           alignSelf: 'center',
           top: Platform.OS==="android"? 20 / 3:18 / 2,
-          position:Platform.OS==="android"?"":"relative",
+          position:"relative",
         },
         labelText: {
           textAlign: 'center',
           flexWrap: 'wrap',
           width: 100,
           paddingTop: 4,
-          position:Platform.OS==="android"?"":"relative",
+          position:"relative",
           fontFamily: this.props.labelFontFamily,
           color: this.props.completedLabelColor,
           marginTop: 4,
@@ -119,14 +119,14 @@ class StepIcon extends Component {
         circleText: {
           alignSelf: 'center',
           top: Platform.OS==="android"? 20 / 3:18 / 2,
-          position:Platform.OS==="android"?"":"relative",
+          position:"relative",
         },
         labelText: {
           textAlign: 'center',
           flexWrap: 'wrap',
           width: 100,
           paddingTop: 4,
-          position:Platform.OS==="android"?"":"relative",
+          position:"relative",
           fontFamily: this.props.labelFontFamily,
           color: this.props.labelColor,
           marginTop: 4,
