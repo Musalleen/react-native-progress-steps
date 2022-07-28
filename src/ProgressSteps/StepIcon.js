@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity,Platform } from 'react-native';
 import PropTypes from 'prop-types';
 
 class StepIcon extends Component {
@@ -19,20 +19,21 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 20 / 3,
+          top: Platform.OS==="android"? 20 / 3:18 / 2,
+          position:"relative"
         },
         labelText: {
           textAlign: 'center',
           flexWrap: 'wrap',
           width: 100,
           paddingTop: 4,
+          position:"relative",
           fontFamily: this.props.labelFontFamily,
           color: this.props.activeLabelColor,
           fontSize: this.props.activeLabelFontSize || this.props.labelFontSize,
         },
         leftBar: {
           position: 'absolute',
-          zIndex:-1,
           top: 40 / 2.22,
           left: 0,
           right: 40,
@@ -40,10 +41,10 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.completedProgressBarColor,
           marginRight: 40 / 2 + 2,
+          zIndex:-10
         },
         rightBar: {
           position: 'absolute',
-          zIndex:-1,
           top: 40 / 2.22,
           right: 0,
           left: 40,
@@ -51,6 +52,7 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.progressBarColor,
           marginLeft: 40 / 2 + 2,
+          zIndex:-10
         },
         stepNum: {
           color: this.props.activeStepNumColor,
@@ -66,13 +68,15 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 18 / 2,
+          top: Platform.OS==="android"? 20 / 3:18 / 2,
+          position:"relative",
         },
         labelText: {
           textAlign: 'center',
           flexWrap: 'wrap',
           width: 100,
           paddingTop: 4,
+          position:"relative",
           fontFamily: this.props.labelFontFamily,
           color: this.props.completedLabelColor,
           marginTop: 4,
@@ -87,6 +91,7 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.completedProgressBarColor,
           marginRight: 36 / 2 + 4,
+          zIndex:-10
         },
         rightBar: {
           position: 'absolute',
@@ -97,6 +102,7 @@ class StepIcon extends Component {
           borderTopWidth: this.props.borderWidth,
           borderTopColor: this.props.completedProgressBarColor,
           marginLeft: 36 / 2 + 4,
+          zIndex:-10
         },
         stepNum: {
           color: this.props.completedStepNumColor,
@@ -112,13 +118,15 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 18 / 2,
+          top: Platform.OS==="android"? 20 / 3:18 / 2,
+          position:"relative",
         },
         labelText: {
           textAlign: 'center',
           flexWrap: 'wrap',
           width: 100,
           paddingTop: 4,
+          position:"relative",
           fontFamily: this.props.labelFontFamily,
           color: this.props.labelColor,
           marginTop: 4,
